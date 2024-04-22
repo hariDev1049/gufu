@@ -3,6 +3,8 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { FirebaseProvider } from './context/Firebase';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -19,9 +21,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Header />
-        {children}
-        <Footer />
+        <main className="h-screen w-full flex flex-col">
+          <Header />
+          <FirebaseProvider>{children}</FirebaseProvider>
+          <Footer />
+        </main>
       </body>
     </html>
   );

@@ -8,18 +8,30 @@ const Header = () => {
   };
 
   return (
-    <div className="w-full py-4 flex justify-between">
+    <div className="w-full py-4 flex justify-between px-24">
       <div
-        className="pl-28 font-bold text-lime-800 cursor-pointer"
+        className=" font-bold text-lime-800 cursor-pointer"
         onClick={handleClick}
       >
         GuFu
       </div>
       <nav className="pr-10">
         <ul className="flex gap-10 text-lime-800">
-          <li>About</li>
-          <li>Explore</li>
-          <li>Contact</li>
+          <li
+            onClick={() => router.push('/allreciepes')}
+            className="cursor-pointer"
+          >
+            Explore
+          </li>
+          <li onClick={() => router.push('/about')} className="cursor-pointer">
+            About
+          </li>
+          <li
+            onClick={() => router.push('/contact')}
+            className="cursor-pointer"
+          >
+            Contact
+          </li>
         </ul>
       </nav>
     </div>

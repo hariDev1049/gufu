@@ -8,14 +8,14 @@ const Hero = () => {
   };
 
   return (
-    <div className="flex-grow flex ">
+    <div className="flex-grow flex items-center">
       <div className="flex  justify-center items-center flex-grow w-1/2 h-full">
         <div className="pl-20">
           <h1 className="px-10 text-5xl font-extrabold">
             <span className="text-lime-800">Gu</span>od{' '}
             <span className="text-lime-800">Fu</span>od
           </h1>
-          <h4 className="px-10 pt-12 pb-2 text-balance">
+          <h4 className="px-10 pt-12 pb-2 text-balance text-lg">
             Discover culinary delights with our food recipe app! Explore a
             diverse range of recipes from around the world, curated for every
             taste and skill level. With easy-to-follow instructions and

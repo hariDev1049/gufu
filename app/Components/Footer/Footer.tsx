@@ -2,9 +2,9 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <div className="text-center text-balance py-1  text-white">
-      Copyrights reserved by Hariprasad M V. <br></br>
-      <span>Powered by Edamam API</span>
+    <div className="text-center text-balance py-4 w-full flex justify-center text-lime-800 font-semibold">
+      Copyrights reserved by Hariprasad M V.
+      <span>Powered by Spoonacular API</span>
     </div>
   );
 };

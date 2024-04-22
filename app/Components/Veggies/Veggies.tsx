@@ -1,6 +1,7 @@
 import { Card, Gradient, Wrapper } from '@/app/styles/styles';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
 
 const Veggies = () => {
   const [veggies, setVeggies] = useState([]);
@@ -42,9 +43,11 @@ const Veggies = () => {
             return (
               <SplideSlide key={res.id}>
                 <Card>
-                  <p>{res.title}</p>
-                  <img src={res.image} alt={res.title} />
-                  <Gradient />
+                  <Link href={`/recipe/${res.id}`}>
+                    <p>{res.title}</p>
+                    <img src={res.image} alt={res.title} />
+                    <Gradient />
+                  </Link>
                 </Card>
               </SplideSlide>
             );

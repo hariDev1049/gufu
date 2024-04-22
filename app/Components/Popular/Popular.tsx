@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import { Wrapper, Card, Gradient } from '@/app/styles/styles';
 import '@splidejs/react-splide/css';
+import Link from 'next/link';
 
 const Popular = () => {
   const [popular, setPopular] = useState([]);
@@ -40,9 +41,11 @@ const Popular = () => {
             return (
               <SplideSlide key={res.id}>
                 <Card>
-                  <p>{res.title}</p>
-                  <img src={res.image} alt={res.title} />
-                  <Gradient />
+                  <Link href={`/recipe/${res.id}`}>
+                    <p>{res.title}</p>
+                    <img src={res.image} alt={res.title} />
+                    <Gradient />
+                  </Link>
                 </Card>
               </SplideSlide>
             );
