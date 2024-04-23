@@ -2,6 +2,7 @@ import { Card, Gradient, Wrapper } from '@/app/styles/styles';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 const Veggies = () => {
   const [veggies, setVeggies] = useState([]);
@@ -26,7 +27,12 @@ const Veggies = () => {
   }, []);
 
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0, left: 10 }}
+      animate={{ opacity: 1, left: 0 }}
+      exit={{ opacity: 0, left: 0 }}
+      transition={{ duration: 0.8, delay: 0.5 }}
+    >
       <Wrapper>
         <h3 className="text-center text-2xl font-bold pb-6">
           Top Vegeterian Picks
@@ -54,7 +60,7 @@ const Veggies = () => {
           })}
         </Splide>
       </Wrapper>
-    </div>
+    </motion.div>
   );
 };
 

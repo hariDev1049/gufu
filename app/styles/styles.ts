@@ -118,8 +118,6 @@ export const FormStyle = styled.form`
 `;
 
 export const DetailedWrapper = styled.div`
-  margin-top: 10rem;
-  margin-bottom: 5rem;
   display: flex;
 
   .active {
@@ -129,6 +127,7 @@ export const DetailedWrapper = styled.div`
 
   h2 {
     margin-bottom: 2rem;
+    font-weight: 600;
   }
   li {
     font-size: 1.2rem;
@@ -144,4 +143,11 @@ export const Button = styled.button`
   color: #313131;
   background: white;
   border: 2px solid black;
+  margin-right: 2rem;
+  font-weight: 600;
+`;
+
+export const Info = styled.div`
+  margin-left: 5rem;
+  padding-right: 10rem;
 `;

@@ -1,5 +1,6 @@
 'use client';
 import { useRouter } from 'next/navigation';
+import { motion } from 'framer-motion';
 
 const Hero = () => {
   const router = useRouter();
@@ -9,7 +10,13 @@ const Hero = () => {
 
   return (
     <div className="flex-grow flex items-center">
-      <div className="flex  justify-center items-center flex-grow w-1/2 h-full">
+      <motion.div
+        initial={{ opacity: 0, left: 10 }}
+        animate={{ opacity: 1, left: 0 }}
+        exit={{ opacity: 0, left: 0 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
+        className="flex  justify-center items-center flex-grow w-1/2 h-full"
+      >
         <div className="pl-20">
           <h1 className="px-10 text-5xl font-extrabold">
             <span className="text-lime-800">Gu</span>od{' '}
@@ -29,10 +36,16 @@ const Hero = () => {
             Explore Recipes
           </button>
         </div>
-      </div>
-      <div className="flex items-center justify-center flex-grow w-1/2 h-full">
+      </motion.div>
+      <motion.div
+        className="flex items-center justify-center flex-grow w-1/2 h-full"
+        initial={{ opacity: 0, left: 10 }}
+        animate={{ opacity: 1, left: 0 }}
+        exit={{ opacity: 0, left: 0 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
+      >
         <img src="/hero.jpg" alt="hero_section" height={600} width={400} />
-      </div>
+      </motion.div>
     </div>
   );
 };

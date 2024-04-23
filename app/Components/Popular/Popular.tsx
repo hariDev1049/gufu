@@ -3,6 +3,7 @@ import { Splide, SplideSlide } from '@splidejs/react-splide';
 import { Wrapper, Card, Gradient } from '@/app/styles/styles';
 import '@splidejs/react-splide/css';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 const Popular = () => {
   const [popular, setPopular] = useState([]);
@@ -26,7 +27,12 @@ const Popular = () => {
     getReciepes();
   }, []);
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0, left: 10 }}
+      animate={{ opacity: 1, left: 0 }}
+      exit={{ opacity: 0, left: 0 }}
+      transition={{ duration: 1.2, delay: 0.8 }}
+    >
       <Wrapper>
         <h3 className="text-center text-2xl font-bold pb-6">Popular Picks</h3>
 
@@ -52,7 +58,7 @@ const Popular = () => {
           })}
         </Splide>
       </Wrapper>
-    </div>
+    </motion.div>
   );
 };
 

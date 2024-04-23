@@ -5,7 +5,7 @@ import { useParams } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import Search from '@/app/Components/Search/Search';
 import Link from 'next/link';
-
+import { motion } from 'framer-motion';
 const page = () => {
   const params = useParams();
 
@@ -34,7 +34,13 @@ const page = () => {
   }, [params.type]);
 
   return (
-    <div className="px-20">
+    <motion.div
+      initial={{ opacity: 0, left: 10 }}
+      animate={{ opacity: 1, left: 0 }}
+      exit={{ opacity: 0, left: 0 }}
+      transition={{ duration: 0.8, delay: 0.5 }}
+      className="px-20"
+    >
       <Search />
       <Category />
       <Grid>
@@ -50,7 +56,7 @@ const page = () => {
           );
         })}
       </Grid>
-    </div>
+    </motion.div>
   );
 };
 

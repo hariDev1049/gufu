@@ -80,12 +80,11 @@ const Login = () => {
             value={password}
           />
         </Form.Group>
-        <Form.Group className="mt-4 flex gap-7">
+        <Form.Group className="mt-4 flex gap-7 justify-center items-center h-20">
           <Button
             style={{
               backgroundColor: '#313131',
               border: 'none',
-              marginTop: '10px',
               padding: '8px',
               width: '6rem',
             }}
@@ -93,13 +92,14 @@ const Login = () => {
           >
             Login
           </Button>
-          <Button variant="" onClick={handleGoogleSubmit} className="h-8">
+          <Button variant="" onClick={handleGoogleSubmit} className="">
             <div className="flex gap-2 items-center border-2 border-red-500 p-2 rounded justify-start">
-              <FaGoogle className="text-2xl" /> Sign in with Google
+              <img src="/gicon.jpg" alt="google" className="rounded h-7 w-9" />
+              Sign in with Google
             </div>
           </Button>
 
-          <Button variant="" onClick={handleGitSubmit} className="h-9">
+          <Button variant="" onClick={handleGitSubmit} className="">
             <div className="flex gap-2 items-center border-2 border-slate-900 p-2 rounded justify-start">
               <FaGithub className="text-2xl" /> Sign in with Git
             </div>
