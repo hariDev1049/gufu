@@ -1,0 +1,16 @@
+.background{
+    background-image: linear-gradient(
+  170deg,
+  hsl(149deg 51% 16%) 0%,
+  hsl(137deg 27% 25%) 3%,
+  hsl(125deg 17% 33%) 8%,
+  hsl(112deg 13% 41%) 14%,
+  hsl(101deg 11% 48%) 21%,
+  hsl(91deg 11% 56%) 28%,
+  hsl(82deg 13% 64%) 37%,
+  hsl(73deg 16% 73%) 48%,
+  hsl(65deg 22% 82%) 62%,
+  hsl(57deg 40% 91%) 93%
+);
+}
+

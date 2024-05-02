@@ -28,6 +28,10 @@ export const FirebaseProvider = (props: any) => {
     });
   }, []);
 
+  const getLoggedInUser = () => {
+    return userLoggedIn;
+  };
+
   const isLoggedIn = userLoggedIn ? true : false;
 
   const signUpUserWithEmailAndPassword = (email: any, password: any) => {
@@ -55,6 +59,7 @@ export const FirebaseProvider = (props: any) => {
         isLoggedIn,
         signMeOut,
         userLoggedIn,
+        getLoggedInUser,
       }}
     >
       {props.children}

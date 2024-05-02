@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { useFirebase } from '../context/Firebase';
-import { FaGit, FaGithub, FaGoogle } from 'react-icons/fa';
+import { FaGithub, FaGoogle } from 'react-icons/fa';
 import { useRouter } from 'next/navigation';
 
 const Login = () => {
@@ -32,6 +32,7 @@ const Login = () => {
       console.log('Signing user with Google');
       await firebase.signInUserWithGoogle();
       console.log('Login Successfull..!');
+      navigate.push('/');
     } catch (error) {
       console.log('Error in logging in with Google');
     }

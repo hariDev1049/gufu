@@ -1,4 +1,10 @@
+import ContactForm from '../Components/ContactForm/ContactForm';
+
 const page = () => {
-  return <div>Contact</div>;
+  return (
+    <div className="flex justify-center">
+      <ContactForm />
+    </div>
+  );
 };
 export default page;

@@ -2,12 +2,17 @@
 import { useRouter } from 'next/navigation';
 import { GiFoodTruck } from 'react-icons/gi';
 import { usePathname } from 'next/navigation';
+import { useFirebase } from '@/app/context/Firebase';
 
 const Header = () => {
   const router = useRouter();
   const handleClick = () => {
     router.push('/');
   };
+  const firebase = useFirebase();
+
+  // const user = firebase.isLoggedIn();
+  // console.log(user);
 
   const pathname = usePathname();
 
@@ -30,6 +35,7 @@ const Header = () => {
         <ul className="flex gap-10 text-lime-800">
           {path.map((ele) => (
             <li
+              key={ele.name}
               onClick={() => router.push(ele.route)}
               className={
                 pathname === ele.route
@@ -42,6 +48,7 @@ const Header = () => {
           ))}
         </ul>
       </nav>
+      {/* {user ? `Welcome, ${user.name}` : <button>Login</button>} */}
     </div>
   );
 };
